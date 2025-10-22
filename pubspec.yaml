@@ -1,0 +1,7 @@
+name: rainwell
+description: An incremental game set in a shattered Kyiv where rain is worth more than gold
+version: "0.1.0"
+publish_to: none
+
+repository: https://github.com/ghaiklor/rainwell
+issue_tracker: https://github.com/ghaiklor/rainwell/issues
