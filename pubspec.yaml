@@ -8,3 +8,6 @@ issue_tracker: https://github.com/ghaiklor/rainwell/issues
 
 environment:
   sdk: "^3.9.2"
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
