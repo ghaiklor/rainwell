@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:rainwell/screens/game/game_screen.dart';
 import 'package:rainwell/screens/intro/typewriter_text.dart';
 
 const String introText =
@@ -63,7 +62,7 @@ class _IntroScreenState extends State<IntroScreen> {
                   onPressed: () => Navigator.pushReplacement(
                     context,
                     PageRouteBuilder(
-                      pageBuilder: (_, _, _) => GameScreen(),
+                      pageBuilder: (_, _, _) => IntroScreen(),
                       transitionsBuilder: (_, animation, _, child) =>
                           FadeTransition(opacity: animation, child: child),
                       transitionDuration: Duration(seconds: 2),
