@@ -7,6 +7,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(child: Center(child: Text('Home Page')));
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(middle: Text('Rainwell')),
+      child: Center(child: Text('Home Page')),
+    );
   }
 }
