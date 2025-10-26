@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 
 class HomePage extends StatelessWidget {
+  static final String route = '/';
+
   const HomePage({super.key});
 
   @override

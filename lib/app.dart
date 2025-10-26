@@ -7,8 +7,8 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoApp(
-      initialRoute: '/',
-      routes: {'/': (context) => HomePage()},
+      initialRoute: HomePage.route,
+      routes: {HomePage.route: (context) => HomePage()},
       theme: CupertinoThemeData(),
       title: 'Rainwell',
     );
