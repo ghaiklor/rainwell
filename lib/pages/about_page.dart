@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
 class AboutPage extends StatelessWidget {
-  static const String route = '/about';
-
   const AboutPage({super.key});
 
   @override
