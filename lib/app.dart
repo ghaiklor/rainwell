@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:rainwell/pages/about_page.dart';
-import 'package:rainwell/pages/home_page.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -8,9 +7,9 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoApp(
-      initialRoute: HomePage.route,
+      initialRoute: AboutPage.route,
       routes: {
-        HomePage.route: (context) => const HomePage(),
+        '/': (context) => const AboutPage(),
         AboutPage.route: (context) => const AboutPage(),
       },
       theme: CupertinoThemeData(),
