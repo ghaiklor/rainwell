@@ -14,7 +14,7 @@ class MorePage extends StatelessWidget {
             children: [
               CupertinoListSection.insetGrouped(
                 children: [
-                  CupertinoListTile(
+                  CupertinoListTile.notched(
                     title: Text('About'),
                     trailing: CupertinoListTileChevron(),
                     onTap: () => Navigator.of(context).push(
