@@ -2,6 +2,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:rainwell/pages/more_page.dart';
 import 'package:rainwell/pages/resources_page.dart';
 
+enum GameTab {
+  resources(CupertinoIcons.drop_triangle, 'Resources', ResourcesPage()),
+  more(CupertinoIcons.ellipsis, 'More', MorePage());
+
+  final IconData icon;
+  final String label;
+  final Widget page;
+
+  const GameTab(this.icon, this.label, this.page);
+}
+
 class GamePage extends StatelessWidget {
   const GamePage({super.key});
 
@@ -9,28 +20,16 @@ class GamePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoTabScaffold(
       tabBar: CupertinoTabBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.drop_triangle),
-            label: 'Resources',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.ellipsis),
-            label: 'More',
-          ),
-        ],
+        items: GameTab.values
+            .map(
+              (tab) => BottomNavigationBarItem(
+                icon: Icon(tab.icon),
+                label: tab.label,
+              ),
+            )
+            .toList(),
       ),
-      tabBuilder: (context, index) {
-        // TODO: figure out how this can be implemented more maintainable
-        switch (index) {
-          case 0:
-            return ResourcesPage();
-          case 1:
-            return MorePage();
-          default:
-            return ResourcesPage();
-        }
-      },
+      tabBuilder: (context, index) => GameTab.values[index].page,
     );
   }
 }
