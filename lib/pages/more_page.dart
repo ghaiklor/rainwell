@@ -10,6 +10,7 @@ class MorePage extends StatelessWidget {
       builder: (context) {
         return CupertinoPageScaffold(
           backgroundColor: CupertinoColors.systemGroupedBackground,
+          navigationBar: CupertinoNavigationBar(middle: Text('More')),
           child: ListView(
             children: [
               CupertinoListSection.insetGrouped(
